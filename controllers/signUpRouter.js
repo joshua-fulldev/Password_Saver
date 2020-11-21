@@ -5,6 +5,37 @@ const saltRounds = 1;
 var HashPassword;
 
 
+signUpRouter.post('/:username/:password/', (request, response) => {
+    const username = request.params.username;
+    const password = request.params.password;
+
+    UserPass.find({'username': username}).then(res => {
+        if (res.length != 0) {
+            response.status(400).json({message: "Username is already in use..."})
+        }else {
+            bcrypt.genSalt(saltRounds, (err, salt) => {
+                bcrypt.hash(password, salt, (err, hash) => {
+                    HashPassword = hash;
+                    const newUser = new UserPass({
+                        username: username,        
+                        password: HashPassword
+                    })
+                
+                    newUser.save().then(res => {
+                        response.status(200).send(res);
+                    })
+                    .catch(err => {
+                        response.status(400).send(err);
+                    })
+                });
+            });
+
+            
+        }
+    })    
+})
+
+
 signUpRouter.post('/', (request, response) => {
     const {username, password} = request.body;
 
