@@ -3,9 +3,6 @@ const Note = require('../models/Notes');
 
 GetNotesRouter.get('/:Logged_username', (request, response) => {
     const username = request.params.Logged_username;
-    console.log(username);
-
-    console.log("jsdjs");
     Note.find({'owner': username}, 'url username password').then(res => {
         if (res.length == 0) {
             response.status(200).json({message: "No Stored Data found"})
@@ -13,7 +10,7 @@ GetNotesRouter.get('/:Logged_username', (request, response) => {
             response.status(200).json(res);
         }
     }).catch(err => {
-        console.log("Second", Username);
+    
         response.send("Something bad happened");
 })
 })
@@ -30,8 +27,7 @@ GetNotesRouter.get('/:username/:id', (request, response) => {
             response.status(200).json(res);
         }
     }).catch(err => {
-        console.log("Hello I am here");
-        console.log(err);
+        
     })
 })
 
@@ -40,8 +36,7 @@ GetNotesRouter.get('/', (request, response) => {
         response.status(200).json(res)
     })
     .catch(err => {
-        console.log("Hello");
-        console.log(err);
+        
     })
 })
 
