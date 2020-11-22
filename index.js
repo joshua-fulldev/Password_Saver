@@ -8,6 +8,7 @@ const loginRouter = require('./controllers/loginRouter');
 const signUpRouter = require('./controllers/signUpRouter');
 const addNoteRouter = require('./controllers/addNoteRouter');
 const getNoteRouter = require('./controllers/GetNotesRouter');
+const signOutRouter = require('./controllers/SignOutRouter');
 const { response } = require('express');
 
 const config ={
@@ -37,6 +38,8 @@ app.use('/api/signUp', signUpRouter);
 app.use('/api/addNote', addNoteRouter);
 
 app.use('/api/getNotes', getNoteRouter);
+
+app.use('/api/signOut', signOutRouter);
 
 app.get('/api/', (request, response) => {
     console.log("Hello world");

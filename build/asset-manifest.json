@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.02269858.chunk.css",
+    "main.js": "/static/js/main.9f9c76be.chunk.js",
+    "main.js.map": "/static/js/main.9f9c76be.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4830be32.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4830be32.js.map",
+    "static/js/2.351e34a1.chunk.js": "/static/js/2.351e34a1.chunk.js",
+    "static/js/2.351e34a1.chunk.js.map": "/static/js/2.351e34a1.chunk.js.map",
+    "static/js/3.b9ad3228.chunk.js": "/static/js/3.b9ad3228.chunk.js",
+    "static/js/3.b9ad3228.chunk.js.map": "/static/js/3.b9ad3228.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.02269858.chunk.css.map": "/static/css/main.02269858.chunk.css.map",
+    "static/js/2.351e34a1.chunk.js.LICENSE.txt": "/static/js/2.351e34a1.chunk.js.LICENSE.txt",
+    "static/media/bizinsider.f236711d.png": "/static/media/bizinsider.f236711d.png",
+    "static/media/logo.103b5fa1.svg": "/static/media/logo.103b5fa1.svg",
+    "static/media/mashable.a2876b34.png": "/static/media/mashable.a2876b34.png",
+    "static/media/App.css": "/static/media/template_label.68d0bc79.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4830be32.js",
+    "static/js/2.351e34a1.chunk.js",
+    "static/css/main.02269858.chunk.css",
+    "static/js/main.9f9c76be.chunk.js"
+  ]
+}
