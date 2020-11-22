@@ -7,7 +7,8 @@ GetNotesRouter.get('/:Logged_username', (request, response) => {
         if (res.length == 0) {
             response.status(200).json({message: "No Stored Data found"})
         }else {
-            response.status(200).json(res);
+            console.log("This is the json from the monog =db cloud", res);
+            response.status(200).send(res);
         }
     }).catch(err => {
     
